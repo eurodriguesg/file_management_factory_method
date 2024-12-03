@@ -1,5 +1,5 @@
 // src/models/FilePDF.ts
-import { File } from './File';
+import { File } from './File.model';
 
 export class FilePDF implements File {
     open(): void {

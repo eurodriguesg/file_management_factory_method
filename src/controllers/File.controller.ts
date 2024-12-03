@@ -8,7 +8,6 @@ export class FileController {
     async manageFile(req: Request, res: Response): Promise<void> {
 
         try {
-
             const fileType = req.params.type;
 
             if (!fileType) {
@@ -20,17 +19,12 @@ export class FileController {
             }
 
             // Use await corretamente em uma função async
-            const factory = await FileFactory.getFactory(fileType);
-            const file = factory.createFile();
-            
-            // Chamando os métodos do objeto 'file' correto
-            file.open();  // Exibe: 'Opening file...'
-            file.save();  // Exibe: 'Saving file...'
+            const factory = await FileFactory.getFactory(fileType);  // Obter a fábrica correta
+            await factory.manageFile();  // Gerenciar o arquivo (abrir e salvar)
 
             res.status(200).json({
-                message: "File created successfully",
-                type: fileType,
-                instance: file
+                message: "File created and managed successfully",
+                type: fileType
             });
 
         } catch (error: any) {

@@ -1,5 +1,5 @@
 // src/models/FileDOCX.ts
-import { File } from './File';
+import { File } from './File.model';
 
 export class FileDOCX implements File {
     open(): void {

@@ -1,5 +1,5 @@
 // src/models/FileTXT.ts
-import { File } from './File';
+import { File } from './File.model';
 
 export class FileTXT implements File {
     open(): void {

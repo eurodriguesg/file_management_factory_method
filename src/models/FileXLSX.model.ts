@@ -1,5 +1,5 @@
 // src/models/FileXLSX.ts
-import { File } from './File';
+import { File } from './File.model';
 
 export class FileXLSX implements File {
     open(): void {

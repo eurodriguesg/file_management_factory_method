@@ -1,8 +1,18 @@
-import { File } from '../models/File';
+// src/factories/FileFactory.ts
+import { File } from '../models/File.model';
 
 export abstract class FileFactory {
+    // Método abstrato para criar o arquivo
     abstract createFile(): File;
 
+    // Método para gerenciar o arquivo (abrir e salvar)
+    async manageFile(): Promise<void> {
+        const file = this.createFile();  // Cria o arquivo usando a fábrica concreta
+        await file.open();  // Abre o arquivo
+        await file.save();  // Salva o arquivo
+    }
+
+    // Método estático para obter a fábrica correta com base no tipo de arquivo
     static async getFactory(fileType: string): Promise<FileFactory> {
         switch (fileType.toLowerCase()) {
             case 'pdf': {
