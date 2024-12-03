@@ -3,10 +3,10 @@ import { File } from './File';
 
 export class FilePDF implements File {
     open(): void {
-        console.log('Opening PDF file...');
+        console.log('[FILE ✅] Opening PDF file...');
     }
 
     save(): void {
-        console.log('Saving PDF file...');
+        console.log('[FILE ✅] Saving PDF file...');
     }
 }

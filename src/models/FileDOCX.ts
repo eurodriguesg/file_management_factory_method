@@ -3,10 +3,10 @@ import { File } from './File';
 
 export class FileDOCX implements File {
     open(): void {
-        console.log('Opening DOCX file...');
+        console.log('[FILE ✅] Opening DOCX file...');
     }
 
     save(): void {
-        console.log('Saving DOCX file...');
+        console.log('[FILE ✅] Saving DOCX file...');
     }
 }

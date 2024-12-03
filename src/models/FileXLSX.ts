@@ -3,10 +3,10 @@ import { File } from './File';
 
 export class FileXLSX implements File {
     open(): void {
-        console.log('Opening XLSX file...');
+        console.log('[FILE ✅] Opening XLSX file...');
     }
 
     save(): void {
-        console.log('Saving XLSX file...');
+        console.log('[FILE ✅] Saving XLSX file...');
     }
 }

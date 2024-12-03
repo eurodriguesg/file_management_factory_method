@@ -1,7 +1,7 @@
 {
   "name": "filemanagement",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
     "build": "tsc",
@@ -9,11 +9,13 @@
     "vercel-build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eliseu Rodrigues Guimarães",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "chalk": "^5.3.0",
+    "@vercel/node": "^3.2.25",
+    "body-parser": "^1.20.3",
+    "chalk": "^4.1.2",
     "express": "^4.21.1"
   },
   "devDependencies": {
