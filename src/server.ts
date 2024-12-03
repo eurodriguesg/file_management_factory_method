@@ -3,7 +3,7 @@ import express    from 'express';
 import fileRoutes from './routes/file.routes';
 
 const app = express();
-const port = 3000;
+const port = 3005;
 
 app.use('/api/files', fileRoutes);
 

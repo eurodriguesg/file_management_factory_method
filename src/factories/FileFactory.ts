@@ -1,23 +1,28 @@
-// src/factories/FileFactory.ts
-import { ArquivoPDF } from '../models/ArquivoPDF';
-import { ArquivoDOCX } from '../models/ArquivoDOCX';
-import { ArquivoXLSX } from '../models/ArquivoXLSX';
-import { ArquivoTXT } from '../models/ArquivoTXT';
+import { File } from '../models/File';
 
-export class FileFactory {
+export abstract class FileFactory {
+    abstract createFile(): File;
 
-    static criarArquivo(tipo: string) {
-        switch (tipo) {
-            case 'pdf':
-                return new ArquivoPDF();
-            case 'docx':
-                return new ArquivoDOCX();
-            case 'xlsx':
-                return new ArquivoXLSX();
-            case 'txt':
-                return new ArquivoTXT();
+    static async getFactory(fileType: string): Promise<FileFactory> {
+        switch (fileType.toLowerCase()) {
+            case 'pdf': {
+                const { FilePDFFactory } = await import('./FilePDFFactory');
+                return new FilePDFFactory();
+            }
+            case 'docx': {
+                const { FileDOCXFactory } = await import('./FileDOCXFactory');
+                return new FileDOCXFactory();
+            }
+            case 'xlsx': {
+                const { FileXLSXFactory } = await import('./FileXLSXFactory');
+                return new FileXLSXFactory();
+            }
+            case 'txt': {
+                const { FileTXTFactory } = await import('./FileTXTFactory');
+                return new FileTXTFactory();
+            }
             default:
-                throw new Error("Tipo de arquivo inválido");
+                throw new Error("Invalid file type");
         }
     }
 }
