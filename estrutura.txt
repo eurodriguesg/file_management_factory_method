@@ -1,18 +1,25 @@
+nodemon.json
+package.json
+package-lock.json
+README.md
+tsconfig.json
+.vscode
+build
 src/
+└── server.ts
 ├── controllers/
 │   └── File.controller.ts
 ├── factories/
-│   ├── ArquivoFactory.ts
-│   ├── ArquivoPDFFactory.ts
-│   ├── ArquivoDOCXFactory.ts
-│   ├── ArquivoXLSXFactory.ts
-│   └── ArquivoTXTFactory.ts
-│   └── FileFactory.ts
+│   ├── FileFactory.ts
+│   ├── FilePDFFactory.ts
+│   ├── FileDOCXFactory.ts
+│   ├── FileXLSXFactory.ts
+│   └── FileTXTFactory.ts
 ├── models/
-│   ├── Arquivo.ts
-│   ├── ArquivoPDF.ts
-│   ├── ArquivoDOCX.ts
-│   ├── ArquivoXLSX.ts
-│   └── ArquivoTXT.ts
+│   ├── File.model.ts
+│   ├── FilePDF.model.ts
+│   ├── FileDOCX.model.ts
+│   ├── FileXLSX.model.ts
+│   └── FileTXT.model.ts
 └── routes/
-    └── file.routes.ts
+    └── File.routes.ts
