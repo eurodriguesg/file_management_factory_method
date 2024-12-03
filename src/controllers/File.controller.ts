@@ -20,7 +20,7 @@ export class FileController {
 
             // Use await corretamente em uma função async
             const factory = await FileFactory.getFactory(fileType);  // Obter a fábrica correta
-            await factory.manageFile();  // Gerenciar o arquivo (abrir e salvar)
+            await factory.manageFile();                              // Gerenciar o arquivo (abrir e salvar)
 
             res.status(200).json({
                 message: "File created and managed successfully",

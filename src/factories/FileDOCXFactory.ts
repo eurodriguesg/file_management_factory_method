@@ -1,6 +1,6 @@
 // src/factories/FileDOCXFactory.ts
 import { FileFactory } from './FileFactory';
-import { FileDOCX }     from '../models/FileDOCX.model';
+import { FileDOCX }    from '../models/FileDOCX.model';
 
 export class FileDOCXFactory extends FileFactory {
     // Cria uma instância de FileDOCX

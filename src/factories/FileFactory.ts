@@ -8,8 +8,8 @@ export abstract class FileFactory {
     // Método para gerenciar o arquivo (abrir e salvar)
     async manageFile(): Promise<void> {
         const file = this.createFile();  // Cria o arquivo usando a fábrica concreta
-        await file.open();  // Abre o arquivo
-        await file.save();  // Salva o arquivo
+        await file.open();               // Abre o arquivo
+        await file.save();               // Salva o arquivo
     }
 
     // Método estático para obter a fábrica correta com base no tipo de arquivo
