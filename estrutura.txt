@@ -1,0 +1,18 @@
+src/
+├── controllers/
+│   └── File.controller.ts
+├── factories/
+│   ├── ArquivoFactory.ts
+│   ├── ArquivoPDFFactory.ts
+│   ├── ArquivoDOCXFactory.ts
+│   ├── ArquivoXLSXFactory.ts
+│   └── ArquivoTXTFactory.ts
+│   └── FileFactory.ts
+├── models/
+│   ├── Arquivo.ts
+│   ├── ArquivoPDF.ts
+│   ├── ArquivoDOCX.ts
+│   ├── ArquivoXLSX.ts
+│   └── ArquivoTXT.ts
+└── routes/
+    └── file.routes.ts
